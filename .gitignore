@@ -1,0 +1,13 @@
+# image file caches
+Thumbs.db
+ehthumbs.db
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+# OSX
+# =========================
+.DS_Store

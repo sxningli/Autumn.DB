@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{7FC04A3A-87F9-4E1E-BA52-EBE4DE444DC2}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Autumn</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\Library\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autumn.DB.Config\ConfigManager.cs" />
+    <Compile Include="Autumn.DB.Config\ConfigurationDoNotModifyException.cs" />
+    <Compile Include="Autumn.DB.Config\ConfigurationNotLoadException.cs" />
+    <Compile Include="Autumn.DB.Data.ACCESSSupport\BaseDAODefaultImpl.cs" />
+    <Compile Include="Autumn.DB.Data.ACCESSSupport\DBHelper.cs" />
+    <Compile Include="Autumn.DB.Data.EXCELSupport\DBHelper.cs" />
+    <Compile Include="Autumn.DB.Data.MSSQLSupport\BaseDAODefaultImpl.cs" />
+    <Compile Include="Autumn.DB.Data.MSSQLSupport\ConnectionPool.cs" />
+    <Compile Include="Autumn.DB.Data.MSSQLSupport\DBHelper.cs" />
+    <Compile Include="Autumn.DB.Data.MYSQLSupport\BaseDAODefaultImpl.cs" />
+    <Compile Include="Autumn.DB.Data.MYSQLSupport\DBHelper.cs" />
+    <Compile Include="Autumn.DB.Data\AbstractImpl.cs" />
+    <Compile Include="Autumn.DB.Data\BaseDAOMethodMapping.cs" />
+    <Compile Include="Autumn.DB.Data\DBType.cs" />
+    <Compile Include="Autumn.DB.Data\EntityPrimaryKeyImprecise.cs" />
+    <Compile Include="Autumn.DB.Data\IDBHelper.cs" />
+    <Compile Include="Autumn.DB.Data\SchemaInfoType.cs" />
+    <Compile Include="Autumn.DB.Data\SQLSecurity.cs" />
+    <Compile Include="Autumn.DB.Factory\Common.cs" />
+    <Compile Include="Autumn.DB.Factory\DALFactory.cs" />
+    <Compile Include="Autumn.DB.Factory\DBHelperFactory.cs" />
+    <Compile Include="Autumn.DB.IDAL\CompareLogic.cs" />
+    <Compile Include="Autumn.DB.IDAL\ConditionLogic.cs" />
+    <Compile Include="Autumn.DB.IDAL\IBaseDAO.cs" />
+    <Compile Include="Autumn.DB.ORM\ORMUtil.cs" />
+    <Compile Include="Autumn.DB.Data\CustomType.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

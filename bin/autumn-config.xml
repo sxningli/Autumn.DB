@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<autumn-config>
+  <!--
+    数据库支持配置
+    数据库类型：MSSQL,MySQL,Access
+    连接字符串示例：server=.;uid=sa;database=test;Max Pool Size=100;Min Pool Size=10;Asynchronous Processing=true
+  -->
+    <database>
+      <type>MySQL</type>
+      <connection-string>server=127.0.0.1;uid=root;pwd=123456;database=test</connection-string>
+  </database>
+</autumn-config>

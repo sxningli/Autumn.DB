@@ -1,0 +1,5 @@
+E:\CSharp\Autumn.DB\src\bin\Debug\Autumn.dll
+E:\CSharp\Autumn.DB\src\bin\Debug\Autumn.pdb
+E:\CSharp\Autumn.DB\src\bin\Debug\MySql.Data.dll
+E:\CSharp\Autumn.DB\src\obj\Debug\Autumn.dll
+E:\CSharp\Autumn.DB\src\obj\Debug\Autumn.pdb
