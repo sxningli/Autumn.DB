@@ -2,6 +2,49 @@
 
 > 一个功能强劲的C#数据库操作框架，几分钟即可快速上手。
 
+##快速上手
+1.在数据库新建member演示表：
+```{go}
+CREATE DATABASE IF NOT EXISTS `autumnDemo`
+USE `autumnDemo`;
+
+CREATE TABLE `member` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+)
+```
+2.在C#中建立控制台程序作为演示
+```{go}
+class Program
+    {
+        public class Member
+        {
+            public int Id { get; set; }
+            public string Username { get; set; }
+            public string Password { get; set; }
+        }
+
+        static void Main(string[] args)
+        {
+            //以mysql演示
+            ConfigManager.LoaderConfiguration("mysql", "server=127.0.0.1;uid=root;database=autumnDemo");
+
+            Member member = new Member();
+
+            member.Username = "张三";
+            member.Password = "123456";
+
+            bool result = DALFactory<Member>.Insert(member);
+
+            Console.WriteLine(result ? "成功,id:"+member.Id :"失败");
+            Console.ReadKey();
+        }
+    }
+```
+使用手册：<a href="docs.md">docs.md</a>
+
 ## Autumn.DB 是什么
 
 Autumn.DB 是一个功能强大，使用简单的 C# 框架。除了支持sql操作之外，它还提供了经典的面向对象操作方法。Autumn为操作数据库做了大量适配和优化，让你无需配置和繁琐的对应文件就能灵活的操作各种数据库。是Autumn系列框架的成员之一。
@@ -16,4 +59,4 @@ Autumn 诞生于2009年10月2日。当时作者正在学习java，为了脱离�
 
 ## 联系作者
  - Email：<sxningli@163.com>
- - QQ:908031341
+ - QQ：908031341
